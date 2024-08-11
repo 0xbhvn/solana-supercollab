@@ -1,0 +1,24 @@
+[package]
+name = "supercollab"
+version = "0.1.0"
+description = "SuperCollab: A decentralized collaboration platform on Solana for managing projects, tasks, and rewards"
+edition = "2021"
+authors = ["Bhaven Kakade <thisisbhaven@gmail.com>"]
+repository = "https://github.com/0xbhvn/supercollab"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "supercollab"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[dependencies]
+anchor-lang = "0.30.1"
+anchor-spl = "0.30.1"
